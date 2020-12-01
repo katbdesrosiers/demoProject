@@ -5,3 +5,8 @@ h1 {
 h2 {
   font-family: 'Roboto', sans-serif;
 }
+
+.color-game-body {
+  background-image: url("../imgs/christmas-wallpaper.jpg");
+  background-size: cover;
+}
