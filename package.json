@@ -1,0 +1,15 @@
+{
+  "name": "demoProject",
+  "version": "1.0.0",
+  "description": "The webpages are intended to be used as pieces of an escape room. Using JavaScript will add functionality to the webpages, such as confirming when a correct code is entered.\r -design/style the pages\r -js to determine correct colours on first page\r -js to determine correct code on second page",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
