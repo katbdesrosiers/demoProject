@@ -1,10 +1,10 @@
 const { src, dest, series, parallel } = require("gulp");
 const postcss = require('gulp-postcss');
-// const cssnano = require('cssnano');
 const cleancss = require('gulp-clean-css');
 const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
+const concat = require('gulp-concat');
 
 // html task
 
@@ -27,6 +27,7 @@ function stylesTask() {
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer()]))
     .pipe(cleancss())
+    .pipe(concat('all.css'))
     .pipe(sourcemaps.write())
     .pipe(dest('dist/css'))
 }
