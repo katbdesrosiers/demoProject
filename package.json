@@ -1,5 +1,5 @@
 {
-  "name": "demoProject",
+  "name": "demo-project",
   "version": "1.0.0",
   "description": "The webpages are intended to be used as pieces of an escape room. Using JavaScript will add functionality to the webpages, such as confirming when a correct code is entered.\r -design/style the pages\r -js to determine correct colours on first page\r -js to determine correct code on second page",
   "main": "main.js",
@@ -10,6 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+    "autoprefixer": "^10.0.4",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.1.13"
+  },
+  "dependencies": {}
 }

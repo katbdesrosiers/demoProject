@@ -1,4 +1,8 @@
 const { src, dest, series, parallel } = require("gulp");
+const postcss = require('postcss');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 // html task
 
@@ -18,6 +22,9 @@ function scriptsTask() {
 
 function stylesTask() {
   return src('src/css/*.css')
+    .pipe(sourcemaps.init())
+    .pipe(postcss([cssnano(), autoprefixer()]))
+    .pipe(sourcemaps.write())
     .pipe(dest('dist/css'))
 }
 
@@ -33,4 +40,4 @@ exports.scripts = scriptsTask;
 exports.styles = stylesTask;
 exports.imgs = imgsTask;
 
-exports.default = series(htmlTask, scriptsTask, stylesTask, imgsTask);
+exports.default = series(htmlTask, parallel(scriptsTask, stylesTask, imgsTask));
