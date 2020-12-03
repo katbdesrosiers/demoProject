@@ -6,6 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 // html task
 
@@ -18,6 +19,7 @@ function htmlTask() {
 
 function scriptsTask() {
   return src('src/js/*.js')
+    .pipe(babel())
     .pipe(uglify())
     .pipe(dest('dist/js'))
 }
