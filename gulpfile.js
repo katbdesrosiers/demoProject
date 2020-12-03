@@ -5,6 +5,7 @@ const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
 // html task
 
@@ -17,13 +18,14 @@ function htmlTask() {
 
 function scriptsTask() {
   return src('src/js/*.js')
+    .pipe(uglify())
     .pipe(dest('dist/js'))
 }
 
 // styles task
 
 function stylesTask() {
-  return src('src/css/*.css')
+  return src('src/css/sanitize.css, src/css/style.css')
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer()]))
     .pipe(cleancss())
