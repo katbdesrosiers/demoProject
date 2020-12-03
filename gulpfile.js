@@ -27,7 +27,7 @@ function scriptsTask() {
 // styles task
 
 function stylesTask() {
-  return src('src/css/sanitize.css, src/css/style.css')
+  return src('src/css/*.css')
     .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer()]))
     .pipe(cleancss())

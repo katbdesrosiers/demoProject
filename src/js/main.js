@@ -1,4 +1,4 @@
-document.addEventListener('click', e => {
+document.addEventListener('click', function (e) {
 
   if (e.target.classList.contains("color")) {
 
