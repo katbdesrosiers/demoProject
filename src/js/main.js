@@ -1,3 +1,5 @@
+// colors page
+
 document.addEventListener('click', function (e) {
 
   if (e.target.classList.contains("color")) {
@@ -12,9 +14,9 @@ document.addEventListener('click', function (e) {
     } else if (colouredDiv.getAttribute("color") === "blue") {
       bgChangeYellow(colouredDiv);
     }
-  }
 
-  checkColors();
+    checkColors();
+  }
 });
 
 // green function
@@ -57,5 +59,28 @@ function checkColors() {
   if (redCheck.getAttribute("color") === "red" && greenCheck.getAttribute("color") === "green" && blueCheck.getAttribute("color") === "blue" && yellowCheck.getAttribute("color") === "yellow") {
     const linkDisplay = document.querySelector(".link");
     linkDisplay.style.display = "inherit";
+  }
+}
+
+// code page
+
+const button = document.querySelector("button");
+
+button.addEventListener('click', checkCode);
+
+function checkCode() {
+  const codeInput = document.getElementById("code").value;
+  const background = document.querySelector("body");
+  const h1 = document.querySelector("h1");
+
+  if (codeInput === "1107") {
+    alert("Correct code entered.");
+    background.style.backgroundImage = "url('imgs/painting.jpg')";
+    background.style.backgroundSize = "cover";
+    h1.innerHTML = "Code Accepted";
+    h1.style.fontSize = "120px";
+    h1.style.color = "black";
+  } else {
+    alert("Error. Incorrect code entered.");
   }
 }
