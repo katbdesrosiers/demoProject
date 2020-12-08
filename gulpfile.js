@@ -19,7 +19,7 @@ function htmlTask() {
 
 function scriptsTask() {
   return src('src/js/*.js')
-    .pipe(babel())
+    .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
     .pipe(dest('dist/js'))
 }
