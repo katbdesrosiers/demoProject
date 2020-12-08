@@ -6,6 +6,8 @@ h2 {
   font-family: 'Roboto', sans-serif;
 }
 
+/* color styles */
+
 .color-game-body {
   background-image: url("../imgs/christmas-wallpaper.jpg");
   background-size: cover;
@@ -42,4 +44,18 @@ h2 {
   display: none;
   color: rgb(141, 0, 0);
   font-size: 100px;
+}
+
+/* code styles */
+
+.code-body {
+  background-color: rgb(153, 153, 153);
+  margin: auto;
+  max-width: 50%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.code-body h1 {
+  color: rgb(175, 28, 28);
 }
