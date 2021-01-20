@@ -1,8 +1,11 @@
 // colors page
-
+function getAPI() {
 fetch(`https://secure.runescape.com/m=hiscore_oldschool_hardcore_ironman/index_lite.ws?player=katdrag`)
       .then(response => response.json())
-      .then(results => console.log(results);
+      .then(results => console.log(results)
+            }
+            
+            getAPI()
 
 document.addEventListener('click', function (e) {
 
