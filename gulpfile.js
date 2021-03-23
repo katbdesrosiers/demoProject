@@ -21,7 +21,6 @@ function scriptsTask() {
   return src('src/js/*.js')
     .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
-    .pipe(concat('all.js'))
     .pipe(dest('dist/js'))
 }
 
